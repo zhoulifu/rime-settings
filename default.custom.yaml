@@ -1,0 +1,6 @@
+patch:
+  schema_list:
+    - schema: double_pinyin_flypy  # 小鶴双拼
+    - schema: luna_pinyin          # 朙月拼音
+  menu/page_size: 8
+  switcher/caption: "〔选项〕"
