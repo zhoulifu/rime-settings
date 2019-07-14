@@ -4,3 +4,4 @@ patch:
     - schema: luna_pinyin          # 朙月拼音
   menu/page_size: 8
   switcher/caption: "〔选项〕"
+  switcher/option_list_separator: "/"
