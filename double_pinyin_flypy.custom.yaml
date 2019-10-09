@@ -10,5 +10,9 @@ patch:
       states: [ 漢字, 汉字 ]
     - name: ascii_punct
       states: [ 。，, ．， ]
+  engine/filters:
+    - simplifier
+    - uniquifier
+    - charset_filter@utf8
   translator/dictionary: luna_pinyin.extended
   recognizer/patterns/reverse_lookup:
