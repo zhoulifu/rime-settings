@@ -7,12 +7,17 @@ patch:
       states: [ 半角, 全角 ]
     - name: simplification
       reset: 1
-      states: [ 漢字, 汉字 ]
+      states: [ 繁體, 简体 ]
     - name: ascii_punct
       states: [ 。，, ．， ]
+  engine/translators:
+    - punct_translator
+    - script_translator
   engine/filters:
     - simplifier
     - uniquifier
     - charset_filter@utf8
   translator/dictionary: luna_pinyin.extended
-  recognizer/patterns/reverse_lookup:
+  translator/preedit_format:  # Disable preedit text
+  recognizer/patterns/reverse_lookup:   # Disable reverse lookup
+  reverse_lookup:
