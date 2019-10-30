@@ -21,3 +21,35 @@ patch:
   translator/preedit_format:  # Disable preedit text
   recognizer/patterns/reverse_lookup:   # Disable reverse lookup
   reverse_lookup:
+  punctuator:
+    import_preset: default
+    half_shape:
+      '$': '￥'
+      '%': '%'
+      '*': '*'
+      '/': '/'
+      '<': ['《', '〈' ]
+      '>': ['》', '〉' ]
+      '[': '【'
+      "\\": '、'
+      ']': '】'
+      '{': '{'
+      '|': '|'
+      '}': '}'
+      '~': '~'
+    full_shape:
+      '#': '＃'
+      '$': '￥'
+      '%': '%'
+      '*': '＊'
+      '/': '／'
+      '<': ['《', '〈' ]
+      '>': ['》', '〉' ]
+      '@': '@'
+      '[': '【'
+      "\\": '、'
+      ']': '】'
+      '{': '｛'
+      '|': '｜'
+      '}': '｝'
+      '~': '～'
