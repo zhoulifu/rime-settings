@@ -1,0 +1,8 @@
+customization:
+  distribution_code_name: Weasel
+  distribution_version: 0.14.3
+  generator: "Weasel::UIStyleSettings"
+  modified_time: "Tue Oct 29 23:07:46 2019"
+  rime_version: 1.5.3
+patch:
+  "style/color_scheme": wii
