@@ -62,6 +62,8 @@ patch:
       - {when: composing, accept: "Control+bracketleft", send: Escape}
       - {when: composing, accept: "Control+x", send: Delete}
       - {when: composing, accept: "Control+Shift+D", send: "Shift+Delete"}
+      - {when: composing, accept: "Tab", send: Return}
+      - {when: composing, accept: "KP_Enter", send: Return}
       - {when: has_menu, accept: minus, send: Page_Up}
       - {when: has_menu, accept: equal, send: Page_Down}
       - {when: always, accept: "Shift+space", toggle: full_shape}
