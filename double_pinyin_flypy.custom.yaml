@@ -19,8 +19,11 @@ patch:
     - charset_filter@utf8
   translator/dictionary: luna_pinyin.extended
   translator/preedit_format:  # Disable preedit text
-  recognizer/patterns/reverse_lookup:   # Disable reverse lookup
-  reverse_lookup:
+  recognizer:
+    import_preset: default
+    patterns:
+      literal: '^[a-zA-Z]+[_:][a-zA-Z0-9_]*'
+  reverse_lookup:             # Disable reverse lookoup
   punctuator:
     import_preset: default
     half_shape:
