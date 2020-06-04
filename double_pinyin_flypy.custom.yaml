@@ -16,7 +16,7 @@ patch:
   recognizer:
     import_preset: default
     patterns:
-      literal: '^[a-zA-Z]+[_:][a-zA-Z0-9_]*'
+      literal: '^[a-zA-Z]+[_.:][a-zA-Z0-9_]*'
   reverse_lookup:             # Disable reverse lookoup
   punctuator:
     import_preset: default
