@@ -24,4 +24,5 @@ import_tables:
   - luna_pinyin.poetry #常用诗词，来源于唐宋诗词、千家詩、花間集、楚辭、詩經。 2.6w
   - luna_pinyin.computer  #电脑词汇，多为硬件相关，软件方面有待完善。1w
   - luna_pinyin.name    #人名词库，含中外名人。1w
+  - emoji
 ...
