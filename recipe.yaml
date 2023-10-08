@@ -1,0 +1,25 @@
+# encoding: utf-8
+---
+recipe:
+  Rx: patch
+  description: >-
+    Rime customizations
+
+download_files: >-
+  - https://raw.githubusercontent.com/Chernfalin/better-rime-dict/1eccb1b99f5c2936ac2e22162f23bab4419343b5/luna_pinyin.computer.dict.yaml
+  - https://raw.githubusercontent.com/Chernfalin/better-rime-dict/1eccb1b99f5c2936ac2e22162f23bab4419343b5/luna_pinyin.place.dict.yaml
+  - https://raw.githubusercontent.com/Chernfalin/better-rime-dict/1eccb1b99f5c2936ac2e22162f23bab4419343b5/luna_pinyin.poetry.dict.yaml
+
+install_files: >-
+  # squirrel_patch.yaml
+  - default_patch.yaml
+  - double_pinyin_patch.yaml
+  - *.dict.yaml
+
+patch_files:
+  double_pinyin_flypy.custom.yaml:
+    - patch/+:
+        __include: double_pinyin_patch:/patch
+  default.custom.yaml:
+    - patch/+:
+        __include: default_patch:/patch

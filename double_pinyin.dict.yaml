@@ -1,0 +1,12 @@
+# encoding: utf-8
+---
+name: double_pinyin
+version: "0.0.1"
+sort: by_weight
+use_preset_vocabulary: true
+import_tables:
+  - luna_pinyin
+  - luna_pinyin.computer
+  - luna_pinyin.place
+  - luna_pinyin.poetry
+...
