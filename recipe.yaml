@@ -11,9 +11,7 @@ download_files: >-
   - https://raw.githubusercontent.com/Chernfalin/better-rime-dict/1eccb1b99f5c2936ac2e22162f23bab4419343b5/luna_pinyin.poetry.dict.yaml
 
 install_files: >-
-  # squirrel_patch.yaml
-  - default_patch.yaml
-  - double_pinyin_patch.yaml
+  - *_patch.yaml
   - *.dict.yaml
 
 patch_files:
@@ -23,3 +21,6 @@ patch_files:
   default.custom.yaml:
     - patch/+:
         __include: default_patch:/patch
+  squirrel.custom.yaml:
+    - patch/+:
+        __include: squirrel_patch:/patch
