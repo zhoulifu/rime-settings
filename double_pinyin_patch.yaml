@@ -4,7 +4,7 @@ patch:
     - {name: simplification, reset: 1, states: [ 漢, 汉 ]}
     - {name: ascii_punct, states: [ 。, . ]}
     - {name: full_shape, states: [ 半, 全 ]}
-    - {name: emoji_suggestion, reset: 1, states: [ 🈚, 🈶️ ]}
+    - {name: emoji_suggestion, reset: 0, states: [ 🈚, 🈶️ ]}
   "engine/filters/@before 0": simplifier@emoji_suggestion
   "engine/filters/@after last": charset_filter@utf8
   "translator/dictionary": double_pinyin
