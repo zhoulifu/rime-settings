@@ -1,14 +1,13 @@
-patch:
+default:
   schema_list:
-    - schema: double_pinyin_flypy  # 小鶴双拼
-    - schema: luna_pinyin          # 朙月拼音
+    - schema: double_pinyin_flypy
+    - schema: luna_pinyin
   switcher:
     caption: "Options"
     option_list_separator: "/"
     hotkeys: ["Control+grave"]
-  ascii_composer/switch_key/Shift_L: commit_code
   menu/page_size: 8
-  key_binder: 
+  key_binder:
     bindings:
       - {when: composing, accept: "Control+k", send: Up}
       - {when: composing, accept: "Control+j", send: Down}
@@ -16,3 +15,13 @@ patch:
       - {when: composing, accept: "Control+l", send: Right}
       - {when: composing, accept: "Control+u", send: Escape}
       - {when: composing, accept: "KP_Enter", send: Return}
+
+double_pinyin_flypy:
+  switches:
+    - {name: ascii_mode, states: [ zh, en ]}
+    - {name: zh_simp, reset: 1, states: [ 漢, 汉 ]}
+    - {name: ascii_punct, states: [ 。, . ]}
+    - {name: full_shape, states: [ 半, 全 ]}
+  "simplifier/option_name": zh_simp
+  "translator/dictionary": double_pinyin
+  "translator/preedit_format":  # Disable preedit text

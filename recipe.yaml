@@ -17,10 +17,10 @@ install_files: >-
 patch_files:
   double_pinyin_flypy.custom.yaml:
     - patch/+:
-        __include: double_pinyin_patch:/patch
+        __include: rime_patch/double_pinyin_flypy
   default.custom.yaml:
     - patch/+:
-        __include: default_patch:/patch
+        __include: rime_patch/default
   squirrel.custom.yaml:
     - patch/+:
-        __include: squirrel_patch:/patch
+        __include: squirrel_patch:/

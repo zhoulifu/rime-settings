@@ -1,35 +1,34 @@
-patch:
-  "app_options/+":
-    com.neovide.neovide:
-      ascii_mode: true
-    com.googlecode.iterm2:
-      ascii_mode: true
-    com.jetbrains.rider:
-      ascii_mode: true
-    com.jetbrains.intellij.ce:
-      ascii_mode: true
-  "style/color_scheme": clean_gray
-  "preset_color_schemes/clean_gray":
-    name: "clean"
-    author: "z<zlf369777684@gmail.com>"
-    horizontal: true
-    inline_preedit: true
-    corner_radius: 5
-    border_height: 5
-    border_width: 5
-    candidate_format: " %c %@ "
-    font_point: 13
-    font_face: "PingFang SC Light"
-    label_font_point: 11
-    comment_font_point: 11
-    back_color: 0xE9E9E9
-    text_color: 0x000000
-    hilited_text_color: 0x000000
-    hilited_back_color: 0xE9E9E9
-    hilited_candidate_text_color: 0x000000
-    hilited_candidate_back_color: 0xFDD1A7
-    hilited_candidate_label_color: 0x000000
-    hilited_comment_text_color: 0xEEEEEE
-    candidate_text_color: 0x000000
-    label_color: 0x000000
-    comment_text_color: 0x000000
+"app_options/+":
+  com.neovide.neovide:
+    ascii_mode: true
+  com.googlecode.iterm2:
+    ascii_mode: true
+  com.jetbrains.rider:
+    ascii_mode: true
+  com.jetbrains.intellij.ce:
+    ascii_mode: true
+"style/color_scheme": clean_gray
+"preset_color_schemes/clean_gray":
+  name: "clean"
+  author: "z<zlf369777684@gmail.com>"
+  horizontal: true
+  inline_preedit: true
+  corner_radius: 5
+  border_height: 5
+  border_width: 5
+  candidate_format: " %c %@ "
+  font_point: 13
+  font_face: "PingFang SC Light"
+  label_font_point: 11
+  comment_font_point: 11
+  back_color: 0xE9E9E9
+  text_color: 0x000000
+  hilited_text_color: 0x000000
+  hilited_back_color: 0xE9E9E9
+  hilited_candidate_text_color: 0x000000
+  hilited_candidate_back_color: 0xFDD1A7
+  hilited_candidate_label_color: 0x000000
+  hilited_comment_text_color: 0xEEEEEE
+  candidate_text_color: 0x000000
+  label_color: 0x000000
+  comment_text_color: 0x000000
