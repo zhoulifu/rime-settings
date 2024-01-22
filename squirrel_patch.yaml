@@ -1,12 +1,4 @@
-"app_options/+":
-  com.neovide.neovide:
-    ascii_mode: true
-  com.googlecode.iterm2:
-    ascii_mode: true
-  com.jetbrains.rider:
-    ascii_mode: true
-  com.jetbrains.intellij.ce:
-    ascii_mode: true
+"style/alpha": 0.8
 "style/color_scheme": clean_gray
 "preset_color_schemes/clean_gray":
   name: "clean"

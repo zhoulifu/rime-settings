@@ -7,6 +7,8 @@ default:
     option_list_separator: "/"
     hotkeys: ["Control+grave"]
   menu/page_size: 8
+  ascii_composer/switch_key/Shift_L: noop
+  ascii_composer/switch_key/Caps_Lock: commit
   key_binder:
     bindings:
       - {when: composing, accept: "Control+k", send: Up}
@@ -22,6 +24,7 @@ double_pinyin_flypy:
     - {name: zh_simp, reset: 1, states: [ 漢, 汉 ]}
     - {name: ascii_punct, states: [ 。, . ]}
     - {name: full_shape, states: [ 半, 全 ]}
-  "simplifier/option_name": zh_simp
-  "translator/dictionary": double_pinyin
-  "translator/preedit_format":  # Disable preedit text
+  simplifier/option_name: zh_simp
+  translator/dictionary: double_pinyin
+  translator/preedit_format: 
+    - xlint/abcdefghijklmnopqrstuvwxyz/abcdefghijklmnopqrstuvwxyz/

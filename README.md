@@ -1,2 +1,2 @@
 # rime-settings
-Custom settings for ibus-rime
+Custom settings for [rime](https://rime.im/)
