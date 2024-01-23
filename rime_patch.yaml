@@ -33,7 +33,7 @@ double_pinyin_flypy:
   engine/translators/@next: script_translator@emoji
   simplifier/option_name: zh_simp
   translator/dictionary: double_pinyin
-  translator/preedit_format: 
+  translator/preedit_format: &as_is_preedit
     - xlint/abcdefghijklmnopqrstuvwxyz/abcdefghijklmnopqrstuvwxyz/
   emoji_filter:
     opencc_config: emoji.json
@@ -49,6 +49,5 @@ double_pinyin_flypy:
     suffix: ";"
     tips: "😄️"
     dictionary: double_pinyin
-    preedit_format:
-      - "xlint/abcdefghijklmnopqrstuvwxyz/abcdefghijklmnopqrstuvwxyz/"
+    preedit_format: *as_is_preedit
     prism: double_pinyin_flypy
