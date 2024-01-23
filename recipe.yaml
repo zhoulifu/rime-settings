@@ -13,6 +13,7 @@ download_files: >-
 install_files: >-
   - *_patch.yaml
   - *.dict.yaml
+  - rime.lua
 
 patch_files:
   double_pinyin_flypy.custom.yaml:
