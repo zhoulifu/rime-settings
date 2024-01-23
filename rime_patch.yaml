@@ -20,11 +20,22 @@ default:
 
 double_pinyin_flypy:
   switches:
+    - {options: [zh_simp, emoji], states: [ 简体, 😊️ ], reset: 0}
     - {name: ascii_mode, states: [ zh, en ]}
-    - {name: zh_simp, reset: 1, states: [ 漢, 汉 ]}
     - {name: ascii_punct, states: [ 。, . ]}
     - {name: full_shape, states: [ 半, 全 ]}
+  engine:
+    filters:
+      - simplifier@emoji
+      - simplifier
+      - uniquefier
+      - lua_filter@opencc_emoji_filter
   simplifier/option_name: zh_simp
   translator/dictionary: double_pinyin
   translator/preedit_format: 
     - xlint/abcdefghijklmnopqrstuvwxyz/abcdefghijklmnopqrstuvwxyz/
+  emoji:
+    opencc_config: emoji.json
+    option_name: emoji
+    tips: none
+    inherit_comment: true
