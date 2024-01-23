@@ -20,7 +20,7 @@ default:
 
 double_pinyin_flypy:
   switches:
-    - {options: [zh_simp, emoji], states: [ 简体, 😊️ ], reset: 0}
+    - {options: [zh_simp, emoji], states: [ 简体, 😄️ ], reset: 0}
     - {name: ascii_mode, states: [ zh, en ]}
     - {name: ascii_punct, states: [ 。, . ]}
     - {name: full_shape, states: [ 半, 全 ]}
