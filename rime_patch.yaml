@@ -24,12 +24,11 @@ double_pinyin_flypy:
     - {name: ascii_mode, states: [ zh, en ]}
     - {name: ascii_punct, states: [ 。, . ]}
     - {name: full_shape, states: [ 半, 全 ]}
-  engine:
-    filters:
-      - simplifier@emoji
-      - simplifier
-      - uniquefier
-      - lua_filter@opencc_emoji_filter
+  engine/filters:
+    - simplifier@emoji
+    - simplifier
+    - uniquefier
+    - lua_filter@opencc_emoji_filter
   simplifier/option_name: zh_simp
   translator/dictionary: double_pinyin
   translator/preedit_format: 
