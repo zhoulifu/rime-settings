@@ -40,6 +40,7 @@ double_pinyin_flypy:
     option_name: emoji_mode
     tips: none
     inherit_comment: true
+    tags: [emoji]
   recognizer/patterns/+:
     emoji: "^:[a-z]*;?$"
   emoji:
