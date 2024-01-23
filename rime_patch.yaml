@@ -51,4 +51,4 @@ double_pinyin_flypy:
     dictionary: double_pinyin
     preedit_format:
       - "xlint/abcdefghijklmnopqrstuvwxyz/abcdefghijklmnopqrstuvwxyz/"
-    prism: double_pinyin_flypy_emoji
+    prism: double_pinyin_flypy
