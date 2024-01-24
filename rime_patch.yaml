@@ -11,43 +11,25 @@ default:
   ascii_composer/switch_key/Caps_Lock: commit
   key_binder:
     bindings:
-      - {when: composing, accept: "Control+k", send: Up}
-      - {when: composing, accept: "Control+j", send: Down}
-      - {when: composing, accept: "Control+h", send: Left}
-      - {when: composing, accept: "Control+l", send: Right}
-      - {when: composing, accept: "Control+u", send: Escape}
-      - {when: composing, accept: "KP_Enter", send: Return}
+      - { when: composing, accept: "Control+k", send: Up }
+      - { when: composing, accept: "Control+j", send: Down }
+      - { when: composing, accept: "Control+h", send: Left }
+      - { when: composing, accept: "Control+l", send: Right }
+      - { when: composing, accept: "Control+u", send: Escape }
+      - { when: composing, accept: "KP_Enter", send: Return }
 
 double_pinyin_flypy:
   switches:
-    - {name: zh_simp, states: [ 繁, 简 ], reset: 1}
-    - {name: ascii_mode, states: [ zh, en ]}
-    - {name: ascii_punct, states: [ 。, . ]}
-    - {name: full_shape, states: [ 半, 全 ]}
-    - {name: emoji_mode, reset: 1}
-  engine/filters:
-    - simplifier@emoji_filter
-    - simplifier
-    - uniquefier
+    - { name: zh_simp, states: [ 繁, 简 ], reset: 1 }
+    - { name: ascii_mode, states: [ zh, en ]}
+    - { name: ascii_punct, states: [ 。, . ]}
+    - { name: full_shape, states: [ 半, 全 ]}
+    - { name: emoji_mode, reset: 1 }
   "engine/segmentors/@after 1": affix_segmentor@emoji
-  engine/translators/@next: script_translator@emoji
+  engine/filters: [ simplifier@emoji_filter, simplifier, uniquefier ]
   simplifier/option_name: zh_simp
+  recognizer/patterns/+: { emoji: "^:[a-z]*;?$" }
   translator/dictionary: double_pinyin
-  translator/preedit_format: &as_is_preedit
-    - xlint/abcdefghijklmnopqrstuvwxyz/abcdefghijklmnopqrstuvwxyz/
-  emoji_filter:
-    opencc_config: emoji.json
-    option_name: emoji_mode
-    tips: none
-    inherit_comment: true
-    tags: [emoji]
-  recognizer/patterns/+:
-    emoji: "^:[a-z]*;?$"
-  emoji:
-    tag: emoji
-    prefix: ":"
-    suffix: ";"
-    tips: "😄️"
-    dictionary: double_pinyin
-    preedit_format: *as_is_preedit
-    prism: double_pinyin_flypy
+  translator/preedit_format: [ xlint/abcdefghijklmnopqrstuvwxyz/abcdefghijklmnopqrstuvwxyz/ ]
+  emoji_filter: { opencc_config: emoji.json, option_name: emoji_mode, tips: all, tags: [ emoji ]}
+  emoji: { tag: emoji, prefix: ":", suffix: ";", tips: "😄️", extra_tags: [ abc ]}
