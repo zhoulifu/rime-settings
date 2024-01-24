@@ -21,7 +21,7 @@ default:
 double_pinyin_flypy:
   switches:
     - { name: zh_simp, states: [ 繁, 简 ], reset: 1 }
-    - { name: ascii_mode, states: [ zh, en ]}
+    - { name: ascii_mode, states: [ 中, En ]}
     - { name: ascii_punct, states: [ 。, . ]}
     - { name: full_shape, states: [ 半, 全 ]}
     - { name: emoji_mode, reset: 1 }
